@@ -1,0 +1,804 @@
+/*########## Defaults ##########*/
+html {
+    font-family: "Raleway",  sans-serif;
+    overflow-x: hidden;
+    
+
+}
+
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    
+    
+}
+
+nav, header, footer {
+    display: block;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.section-padding {
+     
+    padding: 2rem 9%;
+
+}
+
+h2 {
+    padding: 25px;
+    color: #192948;
+}
+ 
+
+
+a {
+    cursor: pointer;
+}
+
+p{
+    font-size: 18px;
+    
+}
+/*-------------- CSS animations ----------------*/
+
+@keyframes slide {
+    from {
+       transform: translateX(0);
+    }
+    
+    to { transform: translateX(-100%);}
+    
+}
+
+/*########### Nav Bar ##############*/
+
+.header-main {
+
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content:space-between;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+   
+}
+
+.header-main.sticky {
+    
+    background-color: rgba(255,255,255,0.5);
+    
+}
+
+header.sticky ul.topnav li a {
+    
+    color: #192948;
+    
+}
+
+
+header.sticky ul.topnav li.burgerIcon a svg {
+    
+    fill: #192948;
+}
+
+.header-logo {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    padding-left: 40px;
+}
+
+.header-logo img {
+    height: 40px;
+    align-self: center;
+    
+}
+.header-nav {
+    width: fit-content;
+    height: 100%;
+    padding-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.header-nav nav {
+    width: fit-content;
+    height: 100%;
+}
+
+nav ul.topnav {
+    list-style: none;
+    overflow: hidden;
+
+}
+
+nav ul.topnav li{
+    height: 60px;
+    display: inline;
+    float: left;
+    
+    
+}
+
+
+nav ul.topnav li a {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    text-decoration: none;
+    text-align: center;
+    padding: 0 20px;
+    color: #192948;
+    font-weight: 500;
+    
+    
+}
+
+nav ul.topnav li.topnav-right a:hover {
+    background-color: #192948;
+    color: white;
+}
+
+.header-nav ul li.burgerIcon{
+    display: none;
+    height: 60px;
+    align-self: center;
+}
+
+/* -------------- Mobile Nav ----------- */
+
+.navside {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 300px;
+    z-index: 999;
+    background-color: rgba(255,255,255,1);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+
+.navside ul.sidebar {
+    width: 100%;
+}
+
+.navside ul.sidebar li {
+    width: 100%;
+    list-style: none;
+    
+}
+
+.navside ul.sidebar li a{
+    text-decoration: none;
+    display: block;
+    text-decoration: none;
+    padding: 0 10px;
+    line-height: 60px;
+    font-weight: 700;
+    color: #192948;
+    
+}
+
+
+/*########### Hero Section ############*/
+
+.bg-img-1{
+    background-image: url('../src/carousel1.jpg');
+}
+
+.bg-img-2{
+    background-image: url('../src/carousel2.jpg');
+}
+
+.bg-img-3{
+    background-image: url('../src/carousel3.jpg');
+}
+
+.bg-img-4{
+    background-image: url('../src/carousel4.jpg');
+}
+
+.carousel-image {
+    display: block;
+    height: calc(100vh - 60px);
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: brightness(0.7);
+    
+}
+
+.carousel {
+    height:calc(100vh - 60px);
+   
+    
+    
+}
+
+
+/*
+.carousel-caption {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 300px;
+    height: 100%;
+
+}
+*/
+
+.carousel-caption h5 {
+    
+    font-size: 4rem;
+    text-transform: uppercase;
+
+}
+
+.carousel-caption p {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    line-height: 1.5;
+
+}
+
+
+
+/*-------------- About ----------------*/
+
+.about-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+
+    
+}
+
+.about-heading h2{
+    font-size: 26px;
+    position: relative;
+    white-space: pre-line;
+    color: #132647;
+    
+}
+
+
+.about-heading p{
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.about-heading span{
+    color: #18315b;
+    font-weight: 700;
+    
+}
+
+
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.about {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.about-img {
+    border-radius: 5px;
+    flex:1;
+    margin-right: 40px;
+    overflow: hidden;
+    
+}
+
+.about-img img{
+    
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: 0.5s ease;
+}
+
+.about-img img:hover{
+    transform: scale(1.2);
+}
+
+.about-content{
+    flex:1;
+}
+
+.about-content h5 {
+    margin-bottom: 15px;
+}
+
+.about-content p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+
+/*------------- Services ---------------*/
+
+.service .card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   
+    height: 100%;
+    
+}
+
+
+.card .card-body {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    padding: 15px;
+    margin-top: 5px;
+    
+}
+
+
+
+.card .card-body .card-text:first-letter{
+    text-transform:capitalize;
+}
+
+.card .card-body .card-text{
+    flex-grow: 1;
+}
+
+.card-button {
+   margin-top: 30px; 
+}
+
+
+
+/*--------------- Partners ------------------*/
+.partner {
+    width: 100vw;
+    display: flex;
+    align-items: center;
+}
+
+.logos {
+    overflow: hidden;
+    padding: 60px 10px;
+    background-color: #f2f2f2f2;
+    white-space: nowrap;
+    position: relative;
+    
+    
+}
+
+.logos:before, 
+.logos:after{
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    content: "";
+    z-index: 2;
+}
+
+.logos:before{
+    left: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0), white);
+    
+}
+
+.logos:after{
+    right: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0), white);
+    
+}
+
+
+
+.logos-slides {
+   
+    display: inline-block;
+    animation: 20s slide infinite linear;
+    
+}
+
+.logos-slides img {
+    height: 60px;
+    margin: 0 40px;
+}
+
+.logos:hover .logos-slides {
+    animation-play-state: paused;
+}
+
+/*---------------- Gallery -----------------*/
+
+
+.bg-color {
+    border-radius: 10px;
+    background-color: #E7EAEE;
+    padding: 0 40px 0 40px;
+       
+}
+
+.gal-container {
+    padding:40px 0;
+    
+}
+
+.gal-container h5{
+    color: #2F456B;
+    
+}
+
+.gal-container p{
+    font-size: 18px;
+    font-weight: 400;
+    text-indent: 5px;
+}
+
+
+.item {
+  margin-bottom:30px;
+}
+
+
+
+.thumbnail img {
+    width: 100%;
+    border-radius: 5px;
+    transition: transform .2s;
+}
+
+.thumbnail img:hover{
+    transform: scale(1.2);
+}
+
+
+
+/*-------------- Contact -----------------*/
+
+.contact-container {
+    width: 80%;
+    height: auto;
+    margin: 0 auto 50px auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #18315b;
+    box-shadow: 0 0 10px 0 #666;
+    
+}
+
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height:100%;
+}
+
+.contact-info{
+    width: 100%;
+    height: auto;
+    flex: 50%;
+    padding: 30px;
+}
+
+.contact-info h5{
+    color: #d0d5de;
+}
+
+.contact-info p{
+    color: white;
+    font-weight: 400;
+}
+
+.contact-heading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    
+
+    
+}
+
+.contact-info .icon {
+    color: #d0d5de;
+}
+
+
+
+
+/*---------------- Footer -------------------*/
+
+footer {
+    
+    background: #192948;
+}
+
+
+/*################ Tablets ##################*/
+@media only screen and (max-width: 900px){
+    
+    
+    .section-padding {
+     
+        padding: 1rem ;
+
+    }
+    p{
+        font-size: 17px;
+    
+    }
+    
+    /*------------- Nav -------------*/
+    
+    .header-logo{
+        padding-left: 20px;
+    }
+    .header-logo img {
+        height: 40px;
+    
+    }
+    .header-nav {
+   
+    padding-right: 20px;
+    }
+    
+    .header-nav ul li.burgerIcon{
+        display: flex;
+
+    }
+    
+    .hideOnMobile ul.topnav li.topnav-right {
+        display: none;
+    }
+    
+    
+    /*-------- Hero section ---------*/
+    
+
+    
+    .carousel .carousel-caption h5{
+        font-size: 2rem;
+        
+    }
+    
+    .carousel .carousel-caption p{
+        font-size: 1rem;
+        
+    }
+    
+    /*------------ About ---------------*/
+    
+    .about-heading {
+        padding: 0 20px;
+        margin-bottom: 0px;
+        
+    }
+    
+    .container {
+        padding: 0;
+        
+    }
+    
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .about-img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+    
+    .thumbnail img:hover{
+        transform: scale(1);
+    }   
+    
+    
+    
+    .contact-heading {
+        padding: 0 20px;
+        margin-bottom: 0px;
+        
+    }
+    
+     .contact-container {
+        padding: 0;
+        
+    }
+    
+    .contact {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .contact-img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 768px){
+    
+    
+    .about-heading {
+        padding: 0 20px;
+        margin-bottom: 0px;
+        
+    }
+    
+    
+    .about-heading p{
+        font-size: 16px;
+    }
+    
+    .container {
+        padding: 0;
+        
+    }
+    
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .about-img {
+        margin-right: 0px;
+        margin-bottom: 20px;
+        
+    }
+    
+    .about-content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+    
+    
+    
+    
+    .contact-heading {
+        padding: 0 20px;
+        margin-bottom: 0px;
+        
+    }
+    
+     .contact-container {
+        padding: 0;
+        
+    }
+    
+    .contact {
+        padding: 20px;
+        flex-direction: column;
+    }
+    
+    .contact-img {
+        display: none;
+        
+    }
+
+}
+  
+/*################ Mobiles ####################*/
+
+@media only screen and (max-width: 600px){
+    
+    
+    .section-padding {
+     
+        padding: 1rem ;
+
+    }
+    
+    p{
+        font-size: 15px;
+    
+    }
+  
+    /* --------- Navigation ----------*/
+    
+    .header-nav {
+   
+    padding-right: 20px;
+    }
+    
+    .hideOnMobile ul.topnav li.topnav-right {
+        display: none;
+    }
+    
+    .header-logo{
+        padding-left: 20px;
+    }
+    .header-logo img {
+        height: 35px;
+    
+    }
+    
+    .navside ul.sidebar{
+        width: 100%;
+    }
+    
+    
+    /*---------- Hero ----------------*/
+
+    .carousel-caption {
+        
+        margin-bottom: 120px;
+
+    }
+    
+    .carousel .carousel-caption h5{
+        font-size: 2rem;
+        
+    }
+    
+    .carousel .carousel-caption p{
+        font-size: 1rem;
+        
+    }
+    
+    
+    
+/*--------- About ----------- */
+   
+  
+   
+ 
+    }
+
